@@ -1,4 +1,3 @@
-import time
 def assign_reviewers(N, M, b, papers):
     # Initialize reviewer loads
     reviewer_loads = [0] * M
@@ -20,9 +19,9 @@ def assign_reviewers(N, M, b, papers):
             reviewer_loads[reviewer - 1] += 1
 
     # Print the output
-    # print(N)
-    # for i, assignment in enumerate(assignment_matrix):
-    #     print(b, *assignment)
+    print(N)
+    for i, assignment in enumerate(assignment_matrix):
+        print(b, *assignment)
 
 # Example usage
 N, M, b = map(int, input().split())
@@ -32,8 +31,5 @@ for i in range(N):
     paper_info = list(map(int, input().split()))
     papers.append((i + 1, paper_info[1:]))
 
-a = time.time()
+
 assign_reviewers(N, M, b, papers)
-b = time.time()
-c = b-a
-print(c)

@@ -1,5 +1,3 @@
-#PYTHON 
-import time
 import random
 
 # Đọc dữ liệu input
@@ -62,9 +60,7 @@ def print_assignment(assignment):
         print(b, *paper_assignments)
 
 # Thực thi thuật toán local search và in ra phân bố tối ưu
-a = time.time()
 best_assignment = local_search()
-b = time.time()
-c = b-a
-print(round(c, 2))
+print_assignment(best_assignment)
+
 
